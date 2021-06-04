@@ -27,6 +27,16 @@ app.use(async (ctx, next) => {
    }
 });
 
+
+router.get('/', (ctx, next) => {
+
+   ctx.body = {
+      "message" : "Hello"
+   };
+   ctx.status = 200
+	next();
+});
+
 router.get('/get_authen', (ctx, next) => {
 
    ctx.body = {
