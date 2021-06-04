@@ -91,7 +91,9 @@ app.use(bodyParser({
    urlencoded: true
 }));
 
-const server = app.listen(8000).on('error', (err, ctx) => {
+const PORT = process.env.PORT || 3000;
+
+const server = app.listen(PORT).on('error', (err, ctx) => {
    return ctx
 });
 
